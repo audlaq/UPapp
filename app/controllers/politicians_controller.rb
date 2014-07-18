@@ -19,6 +19,10 @@ class PoliticiansController < ApplicationController
     @politician = Politician.new
   end
 
+  def timeline
+    @politician = Politician.find(params[:id])
+  end
+
   # GET /politicians/1/edit
   def edit
   end

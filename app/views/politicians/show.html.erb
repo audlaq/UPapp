@@ -16,8 +16,10 @@
 </p>
 
 <p>
+  <% if @politician.position2 != "" %>
   <strong>Other Position:</strong>
   <%= @politician.position2 %>
+  <% end %>
 </p>
 
 <p>
@@ -52,20 +54,27 @@
   <%= @politician.votes_w_party %>
 </p>
 
-<% if @politician.votes_vs_party %>
 <p>
+<% if @politician.votes_vs_party %>
   <strong>Votes vs party:</strong>
   <%= @politician.votes_vs_party %>
-</p>
 <% end %>
+</p>
 
-<% if @politician.abstains %>
 <p>
+<% if @politician.abstains %>
   <strong>Abstains:</strong>
   <%= @politician.abstains %>
-</p>
 <% end %>
+</p>
 
+<br>
+<br>
+<br>
+
+<%= link_to 'Timeline of Public Statements', politician_timeline_path(@politician.id) %>
+<br>
+<br>
 <!-- <%= link_to 'Edit', edit_politician_path(@politician) %> | -->
 
 <%= link_to 'Back', politicians_path %>
