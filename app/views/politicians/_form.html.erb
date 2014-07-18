@@ -1,0 +1,65 @@
+<%= form_for(@politician) do |f| %>
+  <% if @politician.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@politician.errors.count, "error") %> prohibited this politician from being saved:</h2>
+
+      <ul>
+      <% @politician.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :position1 %><br>
+    <%= f.text_field :position1 %>
+  </div>
+  <div class="field">
+    <%= f.label :position2 %><br>
+    <%= f.text_field :position2 %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :district %><br>
+    <%= f.text_field :district %>
+  </div>
+  <div class="field">
+    <%= f.label :party %><br>
+    <%= f.text_field :party %>
+  </div>
+  <div class="field">
+    <%= f.label :sworn_in %><br>
+    <%= f.number_field :sworn_in %>
+  </div>
+  <div class="field">
+    <%= f.label :person_defeated %><br>
+    <%= f.text_field :person_defeated %>
+  </div>
+  <div class="field">
+    <%= f.label :votes_w_party %><br>
+    <%= f.text_field :votes_w_party %>
+  </div>
+  <div class="field">
+    <%= f.label :votes_vs_party %><br>
+    <%= f.text_field :votes_vs_party %>
+  </div>
+  <div class="field">
+    <%= f.label :abstains %><br>
+    <%= f.text_field :abstains %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

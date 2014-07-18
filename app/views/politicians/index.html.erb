@@ -1,0 +1,10 @@
+<h1>Elected Officials in <%= "#{@state.state}" %></h1>
+
+<p>Here is a listing of all of the elected officials in #{state}</p>
+
+
+    <% @politicians.each do |politician| %>
+      <%= link_to politician.name, politician_path(politician) %>
+    <% end %>
+
+

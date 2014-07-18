@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @politician.name %>
+</p>
+
+<!-- <p>
+  <strong>Image:</strong>
+  <%= @politician.image %>
+</p> -->
+
+<p>
+  <strong>Position:</strong>
+  <%= @politician.position1 %>
+</p>
+
+<p>
+  <strong>Other Position:</strong>
+  <%= @politician.position2 %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @politician.state.state %>
+</p>
+
+<p>
+ <% if @politician.district %>
+  <strong>District:</strong>
+  <%= @politician.district %>
+<% end %>
+</p>
+
+<p>
+  <strong>Party:</strong>
+  <%= @politician.party %>
+</p>
+
+<p>
+  <strong>Sworn in:</strong>
+  <%= @politician.sworn_in %>
+</p>
+
+<!-- <p>
+  <strong>Person defeated:</strong>
+  <%= @politician.person_defeated %>
+</p> -->
+
+<p>
+  <strong>Votes with party:</strong>
+  <%= @politician.votes_w_party %>
+</p>
+
+<% if @politician.votes_vs_party %>
+<p>
+  <strong>Votes vs party:</strong>
+  <%= @politician.votes_vs_party %>
+</p>
+<% end %>
+
+<% if @politician.abstains %>
+<p>
+  <strong>Abstains:</strong>
+  <%= @politician.abstains %>
+</p>
+<% end %>
+
+<!-- <%= link_to 'Edit', edit_politician_path(@politician) %> | -->
+
+<%= link_to 'Back', politicians_path %>

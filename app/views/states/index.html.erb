@@ -1,0 +1,10 @@
+<h1>USA</h1>
+
+
+    <% @states.each do |state| %>
+        <%= link_to state.state, state_path(state) %><br>
+
+    <% end %>
+
+<br>
+
