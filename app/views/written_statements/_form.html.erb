@@ -1,0 +1,33 @@
+<%= form_for(@written_statement) do |f| %>
+  <% if @written_statement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@written_statement.errors.count, "error") %> prohibited this written_statement from being saved:</h2>
+
+      <ul>
+      <% @written_statement.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :statements %><br>
+    <%= f.text_field :statements %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </div>
+  <div class="field">
+    <%= f.label :path %><br>
+    <%= f.text_field :path %>
+  </div>
+  <div class="field">
+    <%= f.label :references %><br>
+    <%= f.text_field :references %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

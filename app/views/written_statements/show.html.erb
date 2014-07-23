@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Statement:
+  <%= @written_statement.statements %></strong>
+</p>
+
+<p>
+  <%= @written_statement.body %>
+</p>
+
+<p>
+  Source:
+  <%= link_to @written_statement.path, @written_statement.path, :target => '_blank'  %>
+</p>
+
+
+
+<%= link_to 'Back', written_statements_path %>

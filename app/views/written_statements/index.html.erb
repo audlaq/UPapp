@@ -1,0 +1,14 @@
+<h1>Listing written_statements</h1>
+
+
+    <% @written_statements.each do |written_statement| %>
+      <tr>
+        <td><%= link_to written_statement.statements %></td>
+        <td><%= written_statement.path, written_statement_path(@politician_id) %></td>
+        <td><%= link_to 'Show', written_statement %></td>
+       
+      </tr>
+    <% end %>
+  
+<br>
+
