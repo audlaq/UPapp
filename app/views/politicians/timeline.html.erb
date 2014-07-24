@@ -2,8 +2,6 @@
 </h2>
 <br>
 <br>
-     <% @politician.written_statements = WrittenStatement.all(:order => 'DATE(date)') %>
-
 
    <% @politician.written_statements.each do |written_statement| %>
      	<strong><%= link_to written_statement.statements, written_statement_path(written_statement) %></strong>
