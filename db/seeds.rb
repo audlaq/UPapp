@@ -1512,7 +1512,7 @@ Politician.create [
 	position2: "Speaker of the House",
 	state_id: 4,
 	district: "8",
-	party: "D",
+	party: "R",
 	sworn_in: 1991,
 	person_defeated: "",
 	votes_w_party: 0.91,
@@ -1823,39 +1823,45 @@ State.create [
 puts "Written Statements loaded"
 WrittenStatement.create [
 {
-	statements: "Government Spending",
-	body: "Statement on changing the spending culture in Washington",
-	path: "http://votesmart.org/public-statement/873651/changing-the-spending-culture-in-washington#.U83nH4BdWQw",
-	politician_id: 108,
-},
-{
 	statements: "House votes for 37th time against Obamacare",
 	body: "House votes again to repeal or defund Obamacare",
 	path: "http://thehill.com/blogs/floor-action/house/300315-house-votes-to-repeal-obamacare",
 	politician_id: 108,
+	date: "2014-05-16",
 },
 {
 	statements: "Boehner Demands Delay of Individual Mandate",
 	body: "House Republican leadership demands delay of Obamacare individual mandate",
 	path: "http://talkingpointsmemo.com/livewire/boehner-obamacare-individual-mandate-delay",
 	politician_id: 108,
+	date: "2013-12-20",
 },
 {
-	statements: "Obamacare Enrollment",
+	statements: "Ohio Obamacare Enrollment",
 	body: "Statement on Ohio Enrollment Numbers",
 	path: "http://votesmart.org/public-statement/868077/boehner-statement-on-ohios-obamacare-enrollment-numbers#.U87FboBdWQw",
 	politician_id: 108,
+	date: "2014-05-02",
 },
 {
 	statements: "House votes for 54th time against Obamacare",
 	body: "House votes again to repeal or defund Obamacare",
 	path: "http://www.washingtonpost.com/blogs/the-fix/wp/2014/03/21/the-house-has-voted-54-times-in-four-years-on-obamacare-heres-the-full-list/",
 	politician_id: 108,
+	date: "2014-03-21",
 },
 {
 	statements: "Suing President Obama for delay of individual mandage",
 	body: "Statement on lawsuit against President Obama for delaying individual mandate",
 	path: "http://www.speaker.gov/press-release/boehner-about-protecting-constitution",
 	politician_id: 108,
+	date: "2014-07-10",
+},
+{
+	statements: "Government Spending",
+	body: "Statement on changing the spending culture in Washington",
+	path: "http://votesmart.org/public-statement/873651/changing-the-spending-culture-in-washington#.U83nH4BdWQw",
+	politician_id: 108,
+	date: "2014-05-30",
 },
 ]
