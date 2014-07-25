@@ -12,6 +12,6 @@ UnPoliticsApp::Application.routes.draw do
 
 
   get "politicians/:id/timeline", to: "politicians#timeline", as: "politician_timeline"
-  # get "politicians/:id/timeline", to: "written_statements#show", as: "written_statements_timeline"
+  get "politicians/:id/new_written", to: "politicians#new_written", as: "politician_new_written"
 
 end

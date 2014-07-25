@@ -3,10 +3,20 @@
 <br>
 <br>
 
-   <% @politician.written_statements.each do |written_statement| %>
+   <% @written_statements.each do |written_statement| %>
      	<strong><%= link_to written_statement.statements, written_statement_path(written_statement) %></strong>
      	<br>
         <br>
         <!-- insert thumbnails of statements, which link to url -->
         <br>
 	<% end %>
+
+
+        <!-- ability to sort by issue -->
+
+		<br>
+        <br>
+        <br>
+        <br>
+
+	<p><%= link_to "Something missing? Please submit any public statements for #{@politician.name} that you do not see here", politician_new_written_path %></p>

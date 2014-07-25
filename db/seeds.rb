@@ -1851,7 +1851,7 @@ WrittenStatement.create [
 	date: "2014-03-21",
 },
 {
-	statements: "Suing President Obama for delay of individual mandage",
+	statements: "Suing President Obama for delay of individual mandate",
 	body: "Statement on lawsuit against President Obama for delaying individual mandate",
 	path: "http://www.speaker.gov/press-release/boehner-about-protecting-constitution",
 	politician_id: 108,

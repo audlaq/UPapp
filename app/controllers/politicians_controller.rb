@@ -21,7 +21,13 @@ class PoliticiansController < ApplicationController
 
   def timeline
     @politician = Politician.find(params[:id])
+    @written_statements = @politician.written_statements.order('date ASC')
     # @politician.written_statements = WrittenStatement.find(params[:id], :order => 'DATE(date)')
+  end
+
+  def new_written
+    @politician = Politician.find(params[:id])
+    @written_statements = WrittenStatement.new
   end
 
   # GET /politicians/1/edit

@@ -9,7 +9,6 @@ class WrittenStatementsController < ApplicationController
   # GET /written_statements/1
   def show
     @written_statement = WrittenStatement.find(params[:id], :order => 'DATE(date)')
-    # date = WrittenStatement.find_by_date()
   end
 
   # GET /written_statements/new
