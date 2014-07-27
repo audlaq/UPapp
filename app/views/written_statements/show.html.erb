@@ -17,6 +17,8 @@
 <p>
 	Date: <%= @written_statement.date %>
 </p>
+<br>
+<br>
+<br>
 
-
-<%= link_to 'Back', written_statements_path %>
+<%= link_to 'Back', politician_timeline_path(@written_statement.politician_id) %>
