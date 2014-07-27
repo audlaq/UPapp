@@ -1,9 +1,7 @@
-<h1>Submit new public statement for </h1>
-
+<h1>Submit new public statement for <%= @politician.name %></h1>
 
 <%= render 'form' %>
+<br>
+<br>
+<%= link_to 'Back', politician_timeline_path(@politician.id) %>
 
-<%= link_to 'Back', written_statements_path %>
-
-
-<!-- put in pol controller so pol name is automatically associatiated, save on form -->

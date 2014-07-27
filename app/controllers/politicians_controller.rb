@@ -22,13 +22,8 @@ class PoliticiansController < ApplicationController
   def timeline
     @politician = Politician.find(params[:id])
     @written_statements = @politician.written_statements.order('date ASC')
-    # @politician.written_statements = WrittenStatement.find(params[:id], :order => 'DATE(date)')
   end
 
-  def new_written
-    @politician = Politician.find(params[:id])
-    @written_statements = WrittenStatement.new
-  end
 
   # GET /politicians/1/edit
   def edit
@@ -36,19 +31,19 @@ class PoliticiansController < ApplicationController
 
   # POST /politicians
   # POST /politicians.json
-  def create
-    @politician = Politician.new(politician_params)
+  # def create
+  #   @politician = Politician.new(politician_params)
 
-    respond_to do |format|
-      if @politician.save
-        format.html { redirect_to @politician, notice: 'Politician was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @politician }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @politician.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #   respond_to do |format|
+  #     if @politician.save
+  #       format.html { redirect_to @politician, notice: 'Politician was successfully created.' }
+  #       format.json { render action: 'show', status: :created, location: @politician }
+  #     else
+  #       format.html { render action: 'new' }
+  #       format.json { render json: @politician.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # PATCH/PUT /politicians/1
   # PATCH/PUT /politicians/1.json

@@ -2,8 +2,10 @@ UnPoliticsApp::Application.routes.draw do
   
   root "states#index"
   resources :states
-  resources :politicians    
-  resources :written_statements
+  resources :politicians, only: [:index, :show, :timeline] do
+    resources :written_statements
+  end   
+  # resources :written_statements
 
 
   # get "politicians", to: "politicians#index", as: "politicians"
@@ -12,6 +14,7 @@ UnPoliticsApp::Application.routes.draw do
 
 
   get "politicians/:id/timeline", to: "politicians#timeline", as: "politician_timeline"
-  get "politicians/:id/new_written", to: "politicians#new_written", as: "politician_new_written"
+  post "politicians/:politician_id/written_statements/new", to: "written_statements#create"
+  # post create form for written statements
 
 end

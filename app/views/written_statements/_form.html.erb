@@ -1,4 +1,4 @@
-<%= form_for(@written_statement) do |f| %>
+<%= form_for @written_statement, url: new_politician_written_statement_path do |f| %>
   <% if @written_statement.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@written_statement.errors.count, "error") %> prohibited this written_statement from being saved:</h2>
@@ -12,21 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :statements %><br>
+    <%= f.label :issue %><br>
     <%= f.text_field :statements %>
   </div>
   <div class="field">
-    <%= f.label :body %><br>
+    <%= f.label :description %><br>
     <%= f.text_area :body %>
   </div>
   <div class="field">
-    <%= f.label :path %><br>
+    <%= f.label :source %><br>
     <%= f.text_field :path %>
   </div>
   <div class="field">
-    <%= f.label :references %><br>
-    <%= f.text_field :references %>
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
   </div>
+  <br>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>
