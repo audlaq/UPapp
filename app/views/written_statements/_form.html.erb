@@ -1,6 +1,6 @@
 <%= form_for @written_statement, url: new_politician_written_statement_path do |f| %>
+  
   <% if @written_statement.errors.any? %>
-    <div id="error_explanation">
       <h2><%= pluralize(@written_statement.errors.count, "error") %> prohibited this written_statement from being saved:</h2>
 
       <ul>
@@ -8,7 +8,6 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
-    </div>
   <% end %>
 
   <div class="field">

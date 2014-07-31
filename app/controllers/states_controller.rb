@@ -1,5 +1,5 @@
 class StatesController < ApplicationController
-  before_action :set_state, only: [:show, :edit, :update, :destroy]
+  before_action :set_state, only: :show
 
   # GET /states
   # GET /states.json
@@ -10,6 +10,7 @@ class StatesController < ApplicationController
   # GET /states/1
   # GET /states/1.json
   def show
+    @state = State.find(params[:id])
   end
 
   # GET /states/new
