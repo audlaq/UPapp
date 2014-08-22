@@ -1,5 +1,14 @@
 <%= form_for @written_statement, url: new_politician_written_statement_path do |f| %>
   
+  <%if user_signed_in? %>
+  <%= yield %>
+  <p>Logged in as <%= current_user.email %></p>
+  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+  <% else %>
+  <%= link_to "Sign up", new_user_registration_path %> | <%= link_to "Login", new_user_session_path %>
+  <% end %>
+
+
   <% if @written_statement.errors.any? %>
       <h2><%= pluralize(@written_statement.errors.count, "error") %> prohibited this written_statement from being saved:</h2>
 
@@ -11,7 +20,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :issue %><br>
+    <%= f.label :statement %><br>
     <%= f.text_field :statements %>
   </div>
   <div class="field">
@@ -22,8 +31,10 @@
     <%= f.label :source %><br>
     <%= f.text_field :path %>
   </div>
+  <br>
   <div class="field">
-    <%= f.label :date %><br>
+    <%= f.label :date %>
+    <%= 'YYYY-MM-DD' %><br>
     <%= f.text_field :date %>
   </div>
   <br>

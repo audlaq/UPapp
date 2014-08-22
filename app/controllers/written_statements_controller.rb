@@ -1,5 +1,6 @@
 class WrittenStatementsController < ApplicationController
   before_action :set_written_statement, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
   before_action :add_written_statement, only: [:new, :create]
 
   def index
@@ -16,6 +17,11 @@ class WrittenStatementsController < ApplicationController
   end
 
   def create
+    if user_signed_in?
+      safe_written_statement = params.require(:written_statement).permit(:statements, :body, :path).merge(politician_id: params[:politician_id])
+      # @written_statement = current_user.written_statements.create safe_written_statement
+      # redirect_to politician_timeline_path(@politician.id)
+    end
     @politician = Politician.find(params[:politician_id])
     @written_statement = @politician.written_statements.new(written_statement_params)
     if @written_statement.save
@@ -23,6 +29,7 @@ class WrittenStatementsController < ApplicationController
     else
       render 'new'
     end
+    
   end
 
   private

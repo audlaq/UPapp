@@ -19,4 +19,12 @@
         <br>
         <br>
 
-	<p><%= link_to "Something missing? Please submit any public statements for #{@politician.name} that you do not see here", new_politician_written_statement_path(@politician.id) %></p>
+	<p><%= link_to "Something missing? Please click here to submit any public statements for #{@politician.name} that you do not see here.", new_politician_written_statement_path(@politician.id) %></p>
+
+
+<br>
+        <br>
+        <br>
+        <br>
+
+        <%= link_to "Back to #{@politician.name}'s profile", politician_path(@politician.id) %>

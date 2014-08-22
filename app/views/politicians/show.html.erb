@@ -17,7 +17,7 @@
 
 <p>
   <% if @politician.position2 != "" %>
-  <strong>Other Position:</strong>
+  <strong>Leadership Position:</strong>
   <%= @politician.position2 %>
   <% end %>
 </p>
@@ -79,4 +79,4 @@
 <br>
 <!-- <ink_to 'Edit', edit_politician_path(@politician) %> | -->
 
-<%= link_to 'Back', state_path(@politician.state_id) %>
+<%= link_to "Back to #{@politician.state.state} state profile page", state_path(@politician.state_id) %>
